@@ -1,0 +1,178 @@
+/* fonts */
+
+/* CSS RESET — Josh Comeau */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* VARIABLES */
+:root {
+  /* colors */
+  --neutral-900: #12131a;
+  --neutral-800: #21222c;
+  --neutral-700: #2a2b37;
+  --neutral-600: #404254;
+  --neutral-200: #e4e4ef;
+  --neutral-100: #f2f2f7;
+  --neutral-0: #ffffff;
+
+  --purple-400: #d3a0fa;
+  --purple-500: #c27cf8;
+  --yellow-500: #ff9f00;
+  --orange-500: #fe8159;
+  --orange-800: #da3701;
+
+  /* font family */
+  --ff-headings: "DM Sans", "Segoe UI", Roboto, sans-serif;
+  --ff-body: "DM Sans", "Segoe UI", Roboto, sans-serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* fixed font sizes */
+  --fs-15: 0.9375rem;
+  --fs-18: 1.125rem;
+
+  /* spacing */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
+
+  /* border radius */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+  --radius-full: 999px; /* Full pill/circle */
+
+  /* typography */
+  --text-16: 1rem;
+  --text-20: 1.25rem;
+  --text-24: 1.5rem;
+  --fluid-text-40-64: clamp(
+    2.5rem,
+    1.7346938775510203rem + 3.265306122448979vw,
+    4rem
+  );
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/* headings */
+.primary-heading,
+.secondary-heading,
+.tertiary-heading {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-extra-bold);
+  line-height: 1.2;
+  color: var(--clr-white);
+}
+.primary-heading {
+  font-size: 2.5rem;
+}
+.secondary-heading {
+  font-size: 2.5rem;
+}
+.tertiary-heading {
+  font-size: 2.5rem;
+}
+
+/* grids & displays */
+.grid-2cols,
+.grid-4cols {
+  display: grid;
+}
+.grid-2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 50em) {
+  .grid-2cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-4cols {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+/* wrappers & containers */
+.container {
+  --max-width: 75rem;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* PAGE STYLES */
+
+/* general styles */
+body {
+  /* css reset */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* css reset */
+
+  font-size: var(--text-16);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  background-color: var(--neutral-0);
+  color: var(--neutral-600);
+}
