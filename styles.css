@@ -126,3 +126,20 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 30rem;
+}
+
+.time {
+  font-size: 2rem;
+  font-weight: var(--fw-600);
+}
