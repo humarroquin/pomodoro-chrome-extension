@@ -2,6 +2,8 @@
 
 const displayDate = document.getElementById("date");
 const displayTime = document.getElementById("time");
+const btn = document.getElementById("show-tasks");
+const aside = document.getElementById("aside");
 
 // date
 const dateOptions = { month: "short", day: "numeric", weekday: "long" };
@@ -18,3 +20,8 @@ function updateTime() {
 updateTime();
 
 setInterval(updateTime, 1000);
+
+// show tasks
+btn.addEventListener("click", () => {
+  aside.classList.toggle("show-tasks");
+});

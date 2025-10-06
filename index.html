@@ -10,14 +10,17 @@
   <body>
     <header class="header container">
       <div class="clock-wrapper">
-        <div id="date">Date</div>
-        <div id="time" class="time">Time</div>
+        <div id="date"></div>
+        <div id="time" class="time"></div>
       </div>
       <div class="music-wrapper">Music player</div>
     </header>
     <main class="main container">
-      <div class="pomodoro-wrapper">Timer</div>
-      <aside class="tasks-wrapper">
+      <div class="pomodoro-wrapper">
+        <div class="timer">25:00</div>
+      </div>
+      <aside id="aside" class="tasks-wrapper">
+        <button id="show-tasks" class="btn-tasks">-></button>
         <h2>Tasks</h2>
       </aside>
     </main>
