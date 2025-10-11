@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="script.js" defer></script>
     <title>Pomodoro Extension</title>
   </head>
@@ -13,15 +20,55 @@
         <div id="date"></div>
         <div id="time" class="time"></div>
       </div>
-      <div class="music-wrapper">Music player</div>
+      <div class="music-wrapper">
+        <span class="music-title"
+          ><i class="fa-solid fa-radio"></i> Lofi radio</span
+        >
+        <div class="album-cover"></div>
+        <div class="music-controls">
+          <button class="music-btns">
+            <i class="fa-solid fa-backward"></i></button
+          ><button class="music-btns">
+            <i class="fa-solid fa-play"></i></button
+          ><button class="music-btns">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
     </header>
     <main class="main container">
-      <div class="pomodoro-wrapper">
-        <div class="timer">25:00</div>
+      <div class="pd__wrapper">
+        <button class="pd__btn pd-btn-setting">
+          <i class="fa-solid fa-gear"></i> Settings
+        </button>
+        <div class="pd__timer">25:00</div>
+        <div class="pd__controls">
+          <button class="pd__btn pd__btn-start">Start</button>
+        </div>
       </div>
       <aside id="aside" class="tasks-wrapper">
-        <button id="show-tasks" class="btn-tasks">-></button>
-        <h2>Tasks</h2>
+        <button id="show-tasks" class="btn-tasks">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <h2>To-Do's</h2>
+        <div class="to-dos-wrapper">
+          <div class="add-to-do-wrapper">
+            <label for="add-to-do"></label>
+            <input
+              type="text"
+              id="add-to-do"
+              name="add-to-do"
+              placeholder="What are we doing today?"
+            />
+            <button class="add-task"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <div class="to-dos-list">
+            <ul>
+              <li>Write a blog post</li>
+              <li>Post on Facebook</li>
+            </ul>
+          </div>
+        </div>
       </aside>
     </main>
   </body>
