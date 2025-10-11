@@ -46,26 +46,32 @@
           <button class="pd__btn pd__btn-start">Start</button>
         </div>
       </div>
-      <aside id="aside" class="tasks-wrapper">
+      <aside id="aside" class="tasks-container">
         <button id="show-tasks" class="btn-tasks">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
-        <h2>To-Do's</h2>
+        <h2 class="to-do-title">To-do's</h2>
         <div class="to-dos-wrapper">
           <div class="add-to-do-wrapper">
-            <label for="add-to-do"></label>
+            <!-- <label for="add-to-do"></label> -->
             <input
               type="text"
               id="add-to-do"
               name="add-to-do"
-              placeholder="What are we doing today?"
+              placeholder="Add a task..."
+              class="add-task-input"
             />
-            <button class="add-task"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn-add-task"><i class="fa-solid fa-plus"></i></button>
           </div>
           <div class="to-dos-list">
-            <ul>
-              <li>Write a blog post</li>
-              <li>Post on Facebook</li>
+            <ul class="tasks-wrapper">
+              <li class="task-list">
+                <p class="task">Post on Facebook</p>
+                <div class="buttons">
+                  <buttons><i class="fa-solid fa-pen-to-square"></i></buttons>
+                  <buttons><i class="fa-solid fa-trash-can"></i></buttons>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
