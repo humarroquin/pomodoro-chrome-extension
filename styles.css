@@ -211,7 +211,7 @@ body {
 
 .pd__btn-start {
   font-size: 2rem;
-  padding-inline: 1.5rem;
+  width: 10rem;
   box-shadow: 0 3px 0 var(--accent-color-secondary);
   transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
   font-weight: var(--fw-700);
@@ -306,4 +306,8 @@ body {
   padding: 0.5rem;
   border-radius: 0.2rem;
   color: var(--accent-color-tertiary);
+}
+
+.buttons-tasks-wrapper {
+  min-width: fit-content;
 }

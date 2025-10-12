@@ -41,9 +41,9 @@
         <button class="pd__btn pd-btn-setting">
           <i class="fa-solid fa-gear"></i> Settings
         </button>
-        <div class="pd__timer">25:00</div>
+        <div id="timer" class="pd__timer">25:00</div>
         <div class="pd__controls">
-          <button class="pd__btn pd__btn-start">Start</button>
+          <button id="start-timer" class="pd__btn pd__btn-start">Start</button>
         </div>
       </div>
       <aside id="aside" class="tasks-container">
@@ -61,13 +61,15 @@
               placeholder="Add a task..."
               class="add-task-input"
             />
-            <button class="btn-add-task"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn-add-task">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
           <div class="to-dos-list">
             <ul class="tasks-wrapper">
               <li class="task-list">
-                <p class="task">Post on Facebook</p>
-                <div class="buttons">
+                <p class="task">Lorem ipsum dolor sit amet.</p>
+                <div class="buttons-tasks-wrapper">
                   <buttons><i class="fa-solid fa-pen-to-square"></i></buttons>
                   <buttons><i class="fa-solid fa-trash-can"></i></buttons>
                 </div>
