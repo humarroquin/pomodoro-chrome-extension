@@ -38,9 +38,18 @@
     </header>
     <main class="main container">
       <div class="pd__wrapper">
-        <button class="pd__btn pd-btn-setting">
+        <button id="set-time" class="pd__btn pd-btn-setting">
           <i class="fa-solid fa-gear"></i> Settings
         </button>
+
+        <dialog class="modal" id="dialog">
+          <div class="flex-wrapper">
+            <p>Set timer:</p>
+            <input id="user-add-time" type="number" min="0" />
+            <button id="set-timer-btn" class="set-timer-btn">Start</button>
+          </div>
+        </dialog>
+
         <div id="timer" class="pd__timer">25:00</div>
         <div class="pd__controls">
           <button id="start-timer" class="pd__btn pd__btn-start">Start</button>

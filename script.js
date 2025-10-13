@@ -12,6 +12,11 @@ let timeLeftInSeconds = setTimeByUser * 60;
 let isCountingDown = false;
 let timerIntervalID = null;
 
+const openModalBtn = document.getElementById("set-time");
+const closeModalBtn = document.getElementById("set-timer-btn");
+const dialog = document.getElementById("dialog");
+const userAddTime = document.getElementById("user-add-time");
+
 // date
 const dateOptions = { month: "short", day: "numeric", weekday: "long" };
 const today = new Date().toLocaleDateString("en-US", dateOptions);
@@ -59,4 +64,29 @@ startTimerBtn.addEventListener("click", () => {
   }
 
   startTimerBtn.textContent = !isCountingDown ? "Start" : "Stop";
+});
+
+// modal
+openModalBtn.addEventListener("click", () => {
+  isCountingDown = false;
+  clearInterval(timerIntervalID);
+  dialog.showModal();
+});
+
+closeModalBtn.addEventListener("click", () => {
+  const time = Number(userAddTime.value);
+  setTimeByUser = time;
+  timeLeftInSeconds = setTimeByUser * 60;
+
+  if (!isCountingDown) {
+    startTimer();
+    isCountingDown = true;
+  } else {
+    isCountingDown = false;
+    clearInterval(timerIntervalID);
+  }
+
+  startTimerBtn.textContent = !isCountingDown ? "Start" : "Stop";
+  userAddTime.value = "";
+  dialog.close();
 });
